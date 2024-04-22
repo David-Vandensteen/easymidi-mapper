@@ -11,6 +11,11 @@ Is useful when you want to remap MIDI controls between different devices, allowi
 - Supports translation of MIDI messages between different MIDI devices.
 - Utilizes easymidi, a MIDI library for Node.js, to handle MIDI input and output.
 
+## Install
+```cmd
+npm i git@github.com:David-Vandensteen/easymidi-translator.git#release/1.0.0
+```
+
 ## Usage
 
 1. Initialization: Create a new instance of Translator.
