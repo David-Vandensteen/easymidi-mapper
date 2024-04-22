@@ -29,15 +29,15 @@ Is useful when you want to remap MIDI controls between different devices, allowi
   
 ## Code example
 ```javascript
-import { Translator } from './translator.js';
+import { easymidi, Translator } from 'easymidi-translator';
 
 // Create a new Translator instance
 const midiTranslator = new Translator();
 
 // Set the MIDI input and output
 midiTranslator
-  .fromEasymidiInput(myMidiInput)
-  .toEasymidiOutput(myMidiOutput);
+  .fromEasymidiInput(new easymidi.Input('myMidiInputName'))
+  .toEasymidiOutput(new easymidi.Output('myMidiOutputName'));
 
 // Define the translation rules
 midiTranslator
