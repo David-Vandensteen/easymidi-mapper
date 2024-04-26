@@ -72,6 +72,18 @@ export default class Translator {
 
     return this;
   }
+
+  dispose() {
+    this.#easymidiInput.removeAllListeners(['cc']);
+    this.#easymidiInput = undefined;
+    this.#easymidiOutput = undefined;
+    this.#fromChannel = undefined;
+    this.#toChannel = undefined;
+    this.#fromController = undefined;
+    this.#toController = undefined;
+
+    return this;
+  }
 }
 
 export { Translator };
