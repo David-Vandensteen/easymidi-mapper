@@ -1,8 +1,8 @@
-# easymidi-translator
+# easymidi-mapper
 
 ## Overview
 
-This library provides a way to translate MIDI (Musical Instrument Digital Interface) messages from one controller and channel to another.  
+This library provides a way to translate MIDI (Musical Instrument Digital Interface) messages from one controller and channel to another.
 Is useful when you want to remap MIDI controls between different devices, allowing for customized MIDI signal routing.
 
 ## Features
@@ -31,28 +31,28 @@ npm i git@github.com:David-Vandensteen/easymidi-translator.git#release/1.0.1
 5. Apply the Translation:
    * Call the apply() method to start translating MIDI messages.
    * If both controller translations are defined, the class listens for control change (cc) messages on the source channel/controller and sends them to the specified destination.
-  
+
 ## Code example
 ```javascript
-import { easymidi, Translator } from 'easymidi-translator';
+import { easymidi, MidiMapper } from 'easymidi-mapper';
 
-// Create a new Translator instance
-const midiTranslator = new Translator();
+// Create a new MidiMapper instance
+const midiMapper = new MidiMapper();
 
 // Set the MIDI input and output
-midiTranslator
+midiMapper
   .fromEasymidiInput(new easymidi.Input('myMidiInputName'))
   .toEasymidiOutput(new easymidi.Output('myMidiOutputName'));
 
 // Define the translation rules
-midiTranslator
+midiMapper
   .fromChannel(1)
   .toChannel(2)
   .fromController(10)
   .toController(20);
 
 // Apply the translation
-midiTranslator.apply();
+midiMapper.apply();
 ```
 
 ## Important Notes

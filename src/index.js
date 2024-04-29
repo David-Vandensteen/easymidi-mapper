@@ -1,9 +1,9 @@
 import easymidi from 'easymidi';
-import { Translator } from '#src/service/translator';
+import { MidiMapper } from '#src/service/midi_mapper';
 
 export default easymidi;
 
 export {
   easymidi,
-  Translator,
+  MidiMapper,
 };
