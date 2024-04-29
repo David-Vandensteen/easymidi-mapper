@@ -1,6 +1,6 @@
 import assert from 'node:assert';
 
-export default class Translator {
+export default class MidiMapper {
   #easymidiInput;
 
   #easymidiOutput;
@@ -86,4 +86,4 @@ export default class Translator {
   }
 }
 
-export { Translator };
+export { MidiMapper };
