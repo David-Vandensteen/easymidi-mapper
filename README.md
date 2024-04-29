@@ -13,12 +13,12 @@ Is useful when you want to remap MIDI controls between different devices, allowi
 
 ## Install
 ```cmd
-npm i git@github.com:David-Vandensteen/easymidi-translator.git#release/1.0.1
+npm i git@github.com:David-Vandensteen/easymidi-mapper.git#release/2.0.0
 ```
 
 ## Usage
 
-1. Initialization: Create a new instance of Translator.
+1. Initialization: Create a new instance of MidiMapper.
 2. Define MIDI Inputs/Outputs:
    * Use fromEasymidiInput() to set the MIDI input source.
    * Use toEasymidiOutput() to set the MIDI output destination.
