@@ -1,4 +1,4 @@
-import { easymidi, Translator } from '#src/index';
+import { easymidi, MidiMapper } from '#src/index';
 
 const { log } = console;
 
@@ -22,8 +22,8 @@ const connect = () => {
   easymidiOutput = new easymidi.Output(midiOutputName);
 };
 
-const translate = () => {
-  new Translator()
+const mapper = () => {
+  new MidiMapper()
     .fromEasymidiInput(easymidiInput)
     .fromChannel(0)
     .fromController(10)
@@ -36,7 +36,7 @@ const translate = () => {
 const main = () => {
   availableInterfaces();
   connect();
-  translate();
+  mapper();
 };
 
 main();
